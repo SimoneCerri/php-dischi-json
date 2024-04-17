@@ -8,6 +8,15 @@ createApp
             url:"api.php",
             error:"",
             discs:[],
+            showModal: false,
+        }
+    },
+    methods:
+    {
+        changeShowModal()
+        {
+            this.showModal = !this.showModal
+            //console.log(this.showModal);
         }
     },
     mounted()

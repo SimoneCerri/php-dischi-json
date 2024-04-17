@@ -33,12 +33,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-4 g-4" v-for="disc in discs">
-                    <div class="card text-center py-3 px-5 bg-secondary h-100 text-white">
+                    <div class="card text-center py-3 px-5 bg-secondary h-100 text-white" @click="changeShowModal()">
                         <img class="card-img-top" :src="disc.poster" alt="Title" />
                         <div class="card-body">
                             <h4 class="card-title">{{disc.title}}</h4>
                             <p class="card-text">{{disc.author}}</p>
                             <h4 class="card-title">{{disc.year}}</h4>
+                        </div>
+                    </div>
+                    <div v-if="showModal">
+                        <div class="modal-overlay">
+                            <div class="modal df">
+                                <div class="modal_image">
+                                    <img class="check" :src="disc.poster" alt="" />
+                                </div>
+                                <div class="modal_info">
+                                    <h6>
+                                        <strong>
+                                            {{disc.title}}
+                                        </strong>
+                                    </h6>
+                                    <p>by</p>
+                                    <p>{{disc.author}}</p>
+                                    <p>{{disc.year}}</p>
+                                </div>
+                            </div>
+                            <div class="close" @click="changeShowModal()">
+                                <button>X</button>
+                            </div>
                         </div>
                     </div>
                 </div>

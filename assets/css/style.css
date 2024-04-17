@@ -18,11 +18,10 @@
 
 /* #region Common */
 
-*
-{
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 /* #endregion Common */
@@ -36,60 +35,118 @@
 /* #region MediaQuery */
 
 /* #region Desktops & Large screens */
-@media screen and (max-width: 1200px)
-{
-   /* Desktops & Large screens */
+@media screen and (max-width: 1200px) {
+    /* Desktops & Large screens */
 }
+
 /* #endregion Desktops & Large screens */
 
 /* #region Small screens & Laptops */
-@media screen and (max-width: 1024px)
-{
-   /* Small screens & Laptops */
+@media screen and (max-width: 1024px) {
+    /* Small screens & Laptops */
 }
+
 /* #endregion Small screens & Laptops */
 
 /* #region iPads & Tablets */
-@media screen and (max-width: 768px)
-{
-   /* iPads & Tablets */
+@media screen and (max-width: 768px) {
+    /* iPads & Tablets */
 }
+
 /* #endregion iPads & Tablets */
 
 /* #region Mobile */
-@media screen and (max-width: 480px)
-{
-   /* Mobile */
+@media screen and (max-width: 480px) {
+    /* Mobile */
 }
+
 /* #endregion Mobile */
 
 /* #endregion MediaQuery */
 
 
 /* #region Header */
-header
-{
+header {
     height: 70px;
     background-color: rgb(16, 25, 66);
 
-    img 
-    {
+    img {
         max-height: 50px;
     }
 }
+
 /* #endregion Header */
 
 
 /* #region Main */
-#app
-{
+#app {
     background-color: rgb(61, 63, 78);
     height: calc(100vh - 70px);
+
+    .df {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        background-color: #0000001f;
+        z-index: 999;
+    }
+
+    .modal {
+        text-align: center;
+        background-color: rgba(41, 40, 78, 0.301);
+        height: 90vh;
+        width: 90vw;
+        border-radius: 20px;
+    }
+
+    .close {
+        cursor: pointer;
+        position: absolute;
+        left: 95%;
+        bottom: 95%;
+    }
+
+    .check {
+        width: 150px;
+        box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    h6 {
+        font-weight: 500;
+        font-size: 28px;
+        margin: 20px 0;
+    }
+
+    p {
+        font-size: 16px;
+        margin: 20px 0;
+    }
+
+    button {
+        background-color: #333;
+        width: 40px;
+        height: 40px;
+        color: red;
+        font-size: 14px;
+        border-radius: 16px;
+        margin-top: 50px;
+    }
 }
+
 /* #endregion Main */
 
 
 /* #region Footer */
 
 /* #endregion Footer */
-
