@@ -32,8 +32,8 @@
     <div id='app'>
         <div class="container">
             <div class="row">
-                <div class="col-4 g-4" v-for="disc in discs">
-                    <div class="card text-center py-3 px-5 bg-secondary h-100 text-white" @click="changeShowModal()">
+                <div class="col-4 g-4" v-for="disc,index in discs">
+                    <div class="card text-center py-3 px-5 bg-secondary h-100 text-white" @click="changeShowModal(index)">
                         <img class="card-img-top" :src="disc.poster" alt="Title" />
                         <div class="card-body">
                             <h4 class="card-title">{{disc.title}}</h4>
@@ -50,15 +50,15 @@
                                 <div class="modal_info">
                                     <h6>
                                         <strong>
-                                            {{disc.title}}
+                                            {{discModal.title}}
                                         </strong>
                                     </h6>
                                     <p>by</p>
-                                    <p>{{disc.author}}</p>
-                                    <p>{{disc.year}}</p>
+                                    <p>{{discModal.author}}</p>
+                                    <p>{{discModal.year}}</p>
                                 </div>
                             </div>
-                            <div class="close" @click="changeShowModal()">
+                            <div class="close" @click="closeModal()">
                                 <button>X</button>
                             </div>
                         </div>
