@@ -55,9 +55,11 @@
                                     {{discModal.title}}
                                 </strong>
                             </h6>
-                            <p>by</p>
+                            <!-- <p>by</p>
                             <p>{{discModal.author}}</p>
-                            <p>{{discModal.year}}</p>
+                            <p>pubished in</p>
+                            <p>{{discModal.year}}</p> -->
+                            <p>by: <strong>{{discModal.author}},</strong> in: <strong>{{discModal.year}}</strong></p>
                         </div>
                     </div>
                     <div class="close" @click="closeModal()">
