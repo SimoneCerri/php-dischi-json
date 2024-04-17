@@ -41,27 +41,27 @@
                             <h4 class="card-title">{{disc.year}}</h4>
                         </div>
                     </div>
-                    <div v-if="showModal">
-                        <div class="modal-overlay">
-                            <div class="modal df">
-                                <div class="modal_image">
-                                    <img class="check" :src="disc.poster" alt="" />
-                                </div>
-                                <div class="modal_info">
-                                    <h6>
-                                        <strong>
-                                            {{discModal.title}}
-                                        </strong>
-                                    </h6>
-                                    <p>by</p>
-                                    <p>{{discModal.author}}</p>
-                                    <p>{{discModal.year}}</p>
-                                </div>
-                            </div>
-                            <div class="close" @click="closeModal()">
-                                <button>X</button>
-                            </div>
+                </div>
+            </div>
+            <div v-if="showModal">
+                <div class="modal-overlay">
+                    <div class="modal df">
+                        <div class="modal_image">
+                            <img class="check" :src="discModal.poster" alt="" />
                         </div>
+                        <div class="modal_info">
+                            <h6>
+                                <strong>
+                                    {{discModal.title}}
+                                </strong>
+                            </h6>
+                            <p>by</p>
+                            <p>{{discModal.author}}</p>
+                            <p>{{discModal.year}}</p>
+                        </div>
+                    </div>
+                    <div class="close" @click="closeModal()">
+                        <button>X</button>
                     </div>
                 </div>
             </div>
