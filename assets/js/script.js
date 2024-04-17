@@ -17,7 +17,7 @@ createApp
                 this.showModal = !this.showModal
                 //console.log(this.showModal);
                 this.discModal = this.discs[index]
-                console.log(this.discModal);
+                //console.log(this.discModal);
             },
             closeModal()
             {
