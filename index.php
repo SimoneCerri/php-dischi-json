@@ -7,42 +7,54 @@
 
 <head>
 
-   <title>CHANGE TITLE</title>
-   <meta charset='utf-8'>
-   <meta name='viewport' content='width=device-width, initial-scale=1'>
-   <!-- #region link to Style -->
-   <link href='./assets/css/style.css' rel='stylesheet'>
-   <!-- #endregion link to Style -->
-   <!-- #region link to FontAwesome (icons) -->
-   <link rel='stylesheet' href='https: //cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.    css'integrity='sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIft+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=='crossorigin='anonymous' referrerpolicy='no-referrer'/>
-   <!-- #endregion link to FontAwesome (icons) -->
-   <!-- #region links to GoogleFonts (Nanum Gothic Coding) -->
-   <link rel='preconnect' href='https: //fonts.googleapis.com'>
-   <link rel='preconnect' href='https: //fonts.gstatic.com' crossorigin>
-   <link href='https: //fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap' rel='stylesheet'>
-   <!-- #endregion links to GoogleFonts (Nanum Gothic Coding) -->
-   <!-- #region link to Bootstrap -->
-   <link href='https: //cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' crossorigin='anonymous'>
-   <!-- #endregion link to Bootstrap -->
+    <title>Disc PHP</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- #region link to Style -->
+    <link href='./assets/css/style.css' rel='stylesheet'>
+    <!-- #endregion link to Style -->
+    <!-- #region link to Bootstrap -->
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous'>
+    <!-- #endregion link to Bootstrap -->
 
 </head>
 
 <body class='debug'>
 
-   <div id='app'>
-       <h1>Hello World</h1>
-   </div>
-   <!-- #region Dev-only cdns, disable in production -->
-   <!-- #region link to Vue-script -->
-   <script src='https: //unpkg.com/vue@3/dist/vue.global.js'></script>
-   <!-- #endregion link to Vue-script -->
-   <!-- #region link to Bootstrap-script -->
-   <script src='https: //cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz' crossorigin='anonymous'></script>
-   <!-- #endregion link to Bootstrap-script -->
-   <!-- #region link to Script -->
-   <script src='./assets/js/script.js'></script>
-   <!-- #endregion link to Script -->
-   <!-- #endregion Dev-only cdns, disable in production -->
+    <header>
+        <div class="container-fluid pt-2">
+            <div class="d-flex justify-content-start">
+                <img src="./assets/img/logo.svg" alt="">
+            </div>
+        </div>
+    </header>
+
+    <div id='app'>
+        <div class="container">
+            <div class="row">
+                <div class="col-4 g-4" v-for="disc in discs">
+                    <div class="card text-center py-3 px-5 bg-secondary h-100 text-white">
+                        <img class="card-img-top" :src="disc.poster" alt="Title" />
+                        <div class="card-body">
+                            <h4 class="card-title">{{disc.title}}</h4>
+                            <p class="card-text">{{disc.author}}</p>
+                            <h4 class="card-title">{{disc.year}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- #region Dev-only cdns, disable in production -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js' integrity='sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==' crossorigin='anonymous' referrerpolicy='no-referrer'></script>
+    <!-- #region link to Vue-script -->
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <!-- #endregion link to Vue-script -->
+    <!-- #region link to Script -->
+    <script src='./assets/js/script.js'></script>
+    <!-- #endregion link to Script -->
+    <!-- #endregion Dev-only cdns, disable in production -->
 
 </body>
 

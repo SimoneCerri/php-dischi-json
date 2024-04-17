@@ -67,12 +67,25 @@
 
 
 /* #region Header */
+header
+{
+    height: 70px;
+    background-color: rgb(16, 25, 66);
 
+    img 
+    {
+        max-height: 50px;
+    }
+}
 /* #endregion Header */
 
 
 /* #region Main */
-
+#app
+{
+    background-color: rgb(61, 63, 78);
+    height: calc(100vh - 70px);
+}
 /* #endregion Main */
 
 
